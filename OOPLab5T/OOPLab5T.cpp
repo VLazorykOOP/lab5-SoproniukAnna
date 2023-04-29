@@ -66,11 +66,10 @@ void MenuTask1()
 }
 void Task2() 
 {
-    TProcessor* proc = new TProcessor(3000);
-    TDesktopComputer* desComp = new TDesktopComputer("Dell", 1500, proc, 27);
+    TProcessor proc (3000);
+    TDesktopComputer desComp ("Dell", 1500, proc, 27);
 
-    desComp->PrintAll();
-    delete desComp;
+    desComp.PrintAll();
 }
 void MenuTask3() {}
 

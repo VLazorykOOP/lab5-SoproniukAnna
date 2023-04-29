@@ -5,15 +5,12 @@ using namespace std;
 
 TDot::TDot() {}
 
-TDot::TDot(double x)
-{
-	this->x = x;
-}
+TDot::TDot(double x) : x(x), y(x) {}
 
-TDot::TDot(double x, double y)
+TDot::TDot(double x, double y) : x(x), y(y)
 {
-	this->x = x;
-	this->y = y;
+	/*this->x = x;
+	this->y = y;*/
 }
 
 TDot::~TDot() {}
@@ -30,23 +27,11 @@ void TDot::PrintAll()
 
 TColorDot::TColorDot() {}
 
-TColorDot::TColorDot(double x)
-{
-	this->x = x;
-}
+TColorDot::TColorDot(double x) :TDot(x){}
 
-TColorDot::TColorDot(double x, double y)
-{
-	this->x = x;
-	this->y = y;
-}
+TColorDot::TColorDot(double x, double y): TDot(x,y){}
 
-TColorDot::TColorDot(double x, double y, unsigned long color)
-{
-	this->x = x;
-	this->y = y;
-	this->color = color;
-}
+TColorDot::TColorDot(double x, double y, unsigned long color) :TDot(x,y), color(color){}
 
 TColorDot::~TColorDot() {}
 

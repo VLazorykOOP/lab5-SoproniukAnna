@@ -2,10 +2,7 @@
 
 TProcessor::TProcessor() {}
 
-TProcessor::TProcessor(double power)
-{
-	this->power = power;
-}
+TProcessor::TProcessor(double power): power(power){}
 
 TProcessor::~TProcessor() {}
 
@@ -18,17 +15,14 @@ double TProcessor::GetPower()
 
 
 
-TComputer::TComputer(string brand, double price, TProcessor* proc)
+TComputer::TComputer(string brand, double price, TProcessor proc)
 {
 	this->brand = brand;
 	this->price = price;
 	this->processor = proc;
 }
 
-TComputer::~TComputer()
-{
-	delete processor;
-}
+TComputer::~TComputer(){}
 
 string TComputer::getBrand()
 {
@@ -40,16 +34,16 @@ double TComputer::getPrice()
 	return this->price;
 }
 
-TProcessor* TComputer::getProcessor()
+double TComputer::getProcessor()
 {
-	return this->processor;
+	return this->processor.GetPower();
 }
 
 
 
 
 
-TDesktopComputer::TDesktopComputer(string brand, double price, TProcessor* proc, int ms) : TComputer(brand, price, proc)
+TDesktopComputer::TDesktopComputer(string brand, double price, TProcessor proc, int ms) : TComputer(brand, price, proc)
 {
 	this->MonitorSize = ms;
 }
@@ -60,6 +54,6 @@ void TDesktopComputer::PrintAll()
 {
 	cout << "Brand: " << getBrand() << endl;
 	cout << "Price: " << getPrice() << "$" << endl;
-	cout << "Processor power: " << getProcessor()->GetPower() << " MHz" << endl;
-	cout << "Monitor size: " << MonitorSize << " inches" << endl;
+	cout << "Processor power: " << getProcessor() << " MHz" << endl;
+	cout << "Monitor size: " << this->MonitorSize << " inches" << endl;
 }

@@ -2,10 +2,10 @@
 
 class TDot
 {
-public:
+protected:
 	double x = 0;
 	double y = 0;
-
+public:
 	TDot();
 	TDot(double x);
 	TDot(double x, double y);
