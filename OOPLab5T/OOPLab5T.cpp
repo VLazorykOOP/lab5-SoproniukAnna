@@ -4,12 +4,14 @@
 
 #include <iostream>
 #include "Dot.h"
+#include "Comp.h"
 using namespace std;
 
-TColorDot dot(3.5, 5);
+
 
 void MenuTask1() 
 {
+    TColorDot dot(3.5, 5);
     int select = 0;
     do
     {
@@ -62,7 +64,14 @@ void MenuTask1()
         }
     } while (select != 0);
 }
-void MenuTask2() {}
+void Task2() 
+{
+    TProcessor* proc = new TProcessor(3000);
+    TDesktopComputer* desComp = new TDesktopComputer("Dell", 1500, proc, 27);
+
+    desComp->PrintAll();
+    delete desComp;
+}
 void MenuTask3() {}
 
 void MainMenu()
@@ -83,9 +92,10 @@ void MainMenu()
         case 1:
             system("cls");
             MenuTask1();
+            break;
         case 2:
             system("cls");
-            MenuTask2();
+            Task2();
             break;
         case 3:
             system("cls");

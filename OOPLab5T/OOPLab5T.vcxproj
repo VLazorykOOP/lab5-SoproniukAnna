@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Comp.cpp" />
     <ClCompile Include="Dot.cpp" />
     <ClCompile Include="Lab5Exmaple.cpp" />
     <ClCompile Include="OOPLab5T.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Comp.h" />
     <ClInclude Include="Dot.h" />
     <ClInclude Include="Lab5Exmaple.h" />
   </ItemGroup>
