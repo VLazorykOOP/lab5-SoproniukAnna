@@ -2,7 +2,7 @@
 
 TProcessor::TProcessor() {}
 
-TProcessor::TProcessor(double power): power(power){}
+TProcessor::TProcessor(double pow): power(pow){}
 
 TProcessor::~TProcessor() {}
 
@@ -15,12 +15,7 @@ double TProcessor::GetPower()
 
 
 
-TComputer::TComputer(string brand, double price, TProcessor proc)
-{
-	this->brand = brand;
-	this->price = price;
-	this->processor = proc;
-}
+TComputer::TComputer(string br, double pr, TProcessor proc) : brand(br), price(pr), processor(proc){}
 
 TComputer::~TComputer(){}
 
