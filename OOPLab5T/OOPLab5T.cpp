@@ -9,7 +9,6 @@
 using namespace std;
 
 
-
 void MenuTask1() 
 {
     TColorDot dot(3.5, 5);
