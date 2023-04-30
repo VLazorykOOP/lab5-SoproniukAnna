@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Dot.h"
 #include "Comp.h"
+#include "People.h"
 using namespace std;
 
 
@@ -71,7 +72,52 @@ void Task2()
 
     desComp.PrintAll();
 }
-void MenuTask3() {}
+void MenuTask3() 
+{
+        TPerson person;
+        TEmployee employee, employee2;
+        int select = 0;
+        do
+        {
+            cout << '\t' << '\t' << '\t' << "Main menu" << endl;
+            cout << "1. Cin info" << endl;
+            cout << "2. Cout info" << endl;
+            cout << "3. Copy" << endl;
+            cout << "4. Apropriation" << endl; 
+            cout << "0. Exit" << endl;
+            cin >> select;
+            system("cls");
+
+            if (select == 1)
+            {
+                system("cls");
+                cout << "Enter info(Firstname, lastname, age, height, weight, salary)" << endl;
+                cin >> employee;
+            }
+            else
+                if (select == 2)
+                {
+                    system("cls");
+                    cout << employee;
+                }
+                else
+                    if (select == 3)
+                    {
+                        system("cls");
+                        TEmployee employee1 = employee;
+                        cout << employee1;
+                    }
+                    else
+                        if (select == 4)
+                        {
+                            system("cls");
+                            employee2 = employee;
+                            cout << employee2;
+                        }
+                        else
+                            system("cls");
+        } while (select != 0);
+}
 
 void MainMenu()
 {

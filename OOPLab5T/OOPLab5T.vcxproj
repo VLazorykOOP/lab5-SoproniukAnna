@@ -143,11 +143,13 @@
     <ClCompile Include="Dot.cpp" />
     <ClCompile Include="Lab5Exmaple.cpp" />
     <ClCompile Include="OOPLab5T.cpp" />
+    <ClCompile Include="People.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Comp.h" />
     <ClInclude Include="Dot.h" />
     <ClInclude Include="Lab5Exmaple.h" />
+    <ClInclude Include="People.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
